@@ -1,0 +1,160 @@
+
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+  border: 1px solid #555;
+
+}
+
+.menuitem {
+  padding: 8px;
+  margin-top: 10px;
+  border-bottom: 1px solid #f1f1f1;
+  display: block;
+  background-color: #dddddd;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+.menuitem:last-child {
+    border-bottom: none;
+  }
+a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+a:hover {
+    background-color: #555;
+    color: white;
+  }
+.main {
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+#war{
+  display: flex;
+  margin:auto;
+
+}
+
+.right {
+  background-color: lightblue;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+#ny_skrift {
+  font-size: 16px;
+  color: black;
+}
+
+@media only screen and (max-width:880px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:640px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
+
+
+/* Basic CSS Reset */
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.page__body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+/* På mobile enheder */
+.navigation__container{
+    background: #000000;
+    position: sticky;
+    top: 0;
+}
+
+.mobileiconlabel{
+    display: inline-block;
+    color: #ffffff;
+    background: chartreuse;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.menuitem{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Skjule textbox og menuitems indtil der klikkes */
+.menuitems__container, 
+.mobileicon{
+    display: none;
+}
+
+/*Vis menuitems når mobileicon-label er klikket*/
+.navigation__container input:checked ~ .menuitems__container{
+    display: block;
+}
+
+.companylogo{
+    position: absolute;
+    color: white;
+    top: 12px;
+    right: 10px;
+    width: 140px;
+}
+
+/* Regler Wide screen*/
+@media screen and (min-width: 800px){
+    .mobileiconlabel,
+    .mobileicon{
+        display: none;
+    }
+    .menuitem{
+        width: 130px;
+    }
+    .menuitem:hover{
+        background: rgb(123, 166, 194);
+    }
+    .companylogo{
+        left: 10px;
+    }
+    .menuitems__container{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
